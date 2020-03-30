@@ -1,0 +1,87 @@
+@import "node_modules/swiper/swiper.scss";
+// @import "node_modules/swiper/components/pagination/pagination.scss";
+
+.slider {
+  &__banner {
+    &-outer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-container {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+      @extend .swiper-container;
+    }
+
+    &-wrapper {
+      @extend .swiper-wrapper;
+    }
+
+    &-slide {
+      background-size: cover;
+      background-position: 50% 50%;
+      @extend .swiper-slide;
+
+      &--container {
+        @include make-container();
+        @include make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints);
+        height: 100%;
+        padding-top: 275px;
+      }
+
+      &--row {
+        @include make-row();
+      }
+    }
+
+    &-text {
+      color: #0489a8;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    &-pagination {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      z-index: 5;
+      transform: translate(-50%);
+
+      &-bullet {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 8px solid transparent;
+        border-radius: 25px;
+        background-color: #0f3b47;
+        margin: 0 14px;
+
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &--active {
+          width: 32px;
+          height: 32px;
+          border: none;
+          border-radius: 25px;
+          background-color: #0489a8;
+        }
+      }
+    }
+  }
+}

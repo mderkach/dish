@@ -1,0 +1,7 @@
+- var cards = [{"img": "../../../../assets/img/svg/icon-fork.svg", "descr": "Индивидуальный дизайн посуды подчеркнет стиль Вашего заведения и запомнится Вашим гостям"},{"img": "../../../../assets/img/svg/icon-dish.svg", "descr": "Уникальный материал исключает бой посуды и позволяет использовать весь набор столько, сколько Вы считаете нужным"},{"img": "../../../../assets/img/svg/icon-glass.svg", "descr": "Заберем посуду на вторичную переработку и возместим ее остаточную стоимость"},];
+
+.cards__advantages-wrapper
+  each card in cards
+    .cards__advantages
+      img.cards__advantages-logo(src=card.img, alt='')
+      p.cards__advantages-descr !{card.descr}

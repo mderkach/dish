@@ -1,11 +1,13 @@
 .header {
   padding: 32px 0 38px;
+  z-index: 50;
 
   &__wrapper {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    z-index: 50;
   }
 
   &__logo {
@@ -15,11 +17,39 @@
     line-height: 125%;
     text-transform: uppercase;
     color: #0489A8;
+
+    &:hover {
+      text-decoration: none;
+      text-shadow: 0 4px 25px #88d8cf;
+    }
+
+    span {
+      &:nth-child(1) {
+        color: #0489a8;
+      }
+
+      &:nth-child(2) {
+        color: #48a490;
+      }
+
+      &:nth-child(3) {
+        color: #043c53;
+      }
+
+      &:nth-child(4) {
+        color: #043c53;
+        text-transform: lowercase;
+      }
+    }
   }
 
   &__text {
     margin-bottom: 0;
     @extend .text__big;
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   &__contacts {
@@ -34,8 +64,10 @@
       color: #000;
 
       &:hover {
+        cursor: pointer;
         color: #000;
         text-decoration: none;
+        text-shadow: 0 4px 25px #0489A8;
       }
     }
 
@@ -47,6 +79,11 @@
       border-radius: 35px;
       color: #fff;
       @extend .text__button;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 4px 25px #0489A8;
+      }
     }
   }
 }

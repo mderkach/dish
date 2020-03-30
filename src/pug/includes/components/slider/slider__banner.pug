@@ -1,0 +1,12 @@
+.slider__banner-outer
+  .slider__banner-container.swiper-container
+    .slider__banner-wrapper.swiper-wrapper
+      each slide in [0,1,2,3,4]
+        .slider__banner-slide.swiper-slide(style='background-image: url(../../../../assets/img/banner.png)')
+          .slider__banner-slide--container
+            .slider__banner-slide--row
+              h2.slider__banner-text
+                | Создадим для Вас <br>
+                | посуду любой формы <br>
+                | с уникальным дизайном
+  .slider__banner-pagination

@@ -59,3 +59,7 @@ li {
 // example: @import "modules/my-module.scss";
 @import "./modules/header";
 @import "./modules/footer";
+@import "./components/screen/screen__banner";
+@import "./components/slider/slider__banner";
+@import "./components/screen/screen__advantages";
+@import "./components/cards/cards__advantages";
