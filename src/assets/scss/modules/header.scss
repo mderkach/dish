@@ -1,0 +1,52 @@
+.header {
+  padding: 32px 0 38px;
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #0489A8;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    @extend .text__big;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    &-tel {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 135.52%;
+      color: #000;
+
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    &-callback {
+      margin-left: 24px;
+      padding: 17px 65px 18px;
+      background: #0489A8;
+      border: 0;
+      border-radius: 35px;
+      color: #fff;
+      @extend .text__button;
+    }
+  }
+}
