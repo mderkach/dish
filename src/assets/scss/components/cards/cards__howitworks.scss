@@ -1,0 +1,44 @@
+.cards {
+  &__howitworks {
+    @extend .cards__advantages;
+    height: 230px;
+    justify-self: space-between;
+
+    img {
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(1),
+    &:nth-last-child(1) {
+      flex-direction: column-reverse;
+
+      img {
+        margin-top: 30px;
+      }
+    }
+
+    &-outer {
+      position: relative;
+    }
+
+    &-waves {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      z-index: 0;
+    }
+
+    &-wrapper {
+      @extend .cards__advantages-wrapper;
+      @include make-col(12);
+      @include make-col-offset(0);
+      align-items: center;
+    }
+
+    &-descr {
+      @extend .cards__advantages-descr;
+      margin: 0;
+    }
+  }
+}
