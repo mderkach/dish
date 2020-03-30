@@ -55,6 +55,25 @@ li {
   list-style-type: none;
 }
 
+.--afterline {
+  position: relative;
+  margin: 0 auto 16px;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 319px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #48a490;
+    transform: translate(-50%);
+  }
+}
+
 // Modules:
 // example: @import "modules/my-module.scss";
 @import "./modules/header";
@@ -63,3 +82,5 @@ li {
 @import "./components/slider/slider__banner";
 @import "./components/screen/screen__advantages";
 @import "./components/cards/cards__advantages";
+@import "./components/screen/screen__for-who";
+@import "./components/cards/cards__for-who";

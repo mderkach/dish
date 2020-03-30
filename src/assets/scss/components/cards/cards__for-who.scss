@@ -1,0 +1,39 @@
+.cards {
+  &__for-who {
+    display: flex;
+    @include make-col-ready();
+    @include make-col(6);
+    margin-top: 35px;
+
+    &__wrapper {
+      @include make-row();
+      justify-content: center;
+    }
+
+    &-img {
+      display: block;
+      width: 335px;
+      height: 250px;
+      margin-right: 25px;
+      border-radius: 5px;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      @extend .header__h5;
+      color: #0489a8;
+    }
+
+    &-descr {
+      @extend .text__regular;
+      font-size: 18px;
+      color: #0f3b47;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.screen {
+  &__for-who {
+    padding-top: 50px;
+    padding-bottom: 35px;
+
+    &-header {
+      @extend .header__h4;
+      color: #0489a8;
+    }
+  }
+}
