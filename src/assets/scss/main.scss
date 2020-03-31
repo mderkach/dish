@@ -44,6 +44,19 @@ h6 {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  &:hover {
+    cursor: default;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -53,6 +66,12 @@ li {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
 }
 
 .--afterline {
@@ -85,3 +104,4 @@ li {
 @import "./components/cards/cards__for-who";
 @import "./components/screen/screen__howitworks";
 @import "./components/cards/cards__howitworks";
+@import "./components/screen/screen__order";

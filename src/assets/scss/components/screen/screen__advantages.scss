@@ -1,6 +1,7 @@
 .screen {
   &__advantages {
     &-order {
+      display: block;
       @include make-col-ready();
       @include make-col(4);
       margin-left: auto;
@@ -15,6 +16,10 @@
       &:hover {
         cursor: pointer;
         box-shadow: 0 4px 25px #88d8cf;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
   }
