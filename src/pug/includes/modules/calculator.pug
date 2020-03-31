@@ -1,5 +1,5 @@
 .calculator__outer
-  .calculator__wrapper
+  form.calculator__wrapper(action='#' method='POST')
     .calculator__radio-wrapper
       label.calculator__radio
         input.calculator__radio-input(type='radio', name='type')
@@ -121,3 +121,13 @@
               g
                 path(d='M69.81207,48.6c2.20937,0 4.00683,1.79749 4.00683,4.00685c0,2.20937 -1.79746,4.00685 -4.00683,4.00685h-4.13405v5.1517c0,0.5268 -0.42714,0.954 -0.95401,0.954c-0.52687,0 -0.95401,-0.4272 -0.95401,-0.954v-12.21139c0,-0.52687 0.42714,-0.95401 0.95401,-0.95401zM69.81207,54.70568c1.15728,0 2.09883,-0.94155 2.09883,-2.09883c0,-1.15728 -0.94155,-2.09883 -2.09883,-2.09883h-4.13405v4.19766z' fill='#ffffff' fill-opacity='1')
         .calculator__radio-name Другое
+    .calculator__input-wrapper
+      .calculator__input.calculator__select
+        select
+          option(value='0' default hidden) Диаметр (см)
+          option(value='1') 10
+          option(value='20') 20
+          option(value='30') 30
+          option(value='40') 40
+        img.calculator__select-chevron(src="../../../assets/img/chevron-down.png", alt="")
+      input.calculator__input(type="text")
