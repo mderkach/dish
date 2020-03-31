@@ -8,3 +8,4 @@ phones.forEach(input => inputmask.mask(input));
 import "./slider__banner";
 import "./slider__clients";
 import "./custom-select";
+import "./slider__team";
