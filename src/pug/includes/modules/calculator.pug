@@ -130,4 +130,12 @@
           option(value='30') 30
           option(value='40') 40
         img.calculator__select-chevron(src="../../../assets/img/chevron-down.png", alt="")
-      input.calculator__input(type="text")
+      input.calculator__input(type="text" placeholder="Количество изделий данного вида")
+      button.calculator__add Добавить еще один тип посуды
+        span +
+    h3.calculator__price Стоимость заказа: <span>67 225 руб.<span>
+    .calculator__input-wrapper
+      input.calculator__input(type="text" placeholder="Ваше имя" name="name" required)
+      input.calculator__input(type="text" placeholder="Ваш телефон" name="phone" required)
+    p.screen__order-form-agreement Нажимая на кнопку, Вы даете согласие на обработку Персональных данных
+    button.screen__order-form-submit(type='submit') Заказать посуду по индивидуальному дизайну
