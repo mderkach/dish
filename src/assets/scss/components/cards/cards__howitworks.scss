@@ -1,19 +1,36 @@
 .cards {
   &__howitworks {
     @extend .cards__advantages;
-    height: 230px;
-    justify-self: space-between;
-
-    img {
-      margin-bottom: 25px;
-    }
 
     &:nth-child(1),
     &:nth-last-child(1) {
       flex-direction: column-reverse;
+    }
 
+    &:nth-child(1) {
+      .cards__howitworks-descr {
+        margin-bottom: 30px;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
       img {
-        margin-top: 30px;
+        margin-bottom: 23px;
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      top: 35px;
+    }
+
+    &:nth-last-child(1) {
+      position: relative;
+      top: 55px;
+
+      .cards__howitworks-descr {
+        margin-bottom: 25px;
       }
     }
 
