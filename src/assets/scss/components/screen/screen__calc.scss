@@ -1,0 +1,9 @@
+.screen {
+  &__calc {
+    &-header {
+      @extend .header__h4;
+      text-align: center;
+      color: #0489a8;
+    }
+  }
+}

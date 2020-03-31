@@ -6,3 +6,4 @@ let inputmask = new Inputmask("+7(999)999-99-99");
 phones.forEach(input => inputmask.mask(input));
 
 import "./slider__banner";
+import "./slider__clients";

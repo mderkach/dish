@@ -1,0 +1,13 @@
+.screen {
+  &__clients {
+    position: relative;
+    top: -80px;
+    margin-bottom: -80px;
+
+    &-header {
+      @extend .header__h4;
+      text-align: center;
+      color: #0489a8;
+    }
+  }
+}
