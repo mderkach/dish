@@ -56,6 +56,10 @@
     &-descr {
       @extend .cards__advantages-descr;
       margin: 0;
+
+      span {
+        color: #0489a8;
+      }
     }
   }
 }
