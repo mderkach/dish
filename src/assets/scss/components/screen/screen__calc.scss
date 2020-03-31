@@ -1,5 +1,7 @@
 .screen {
   &__calc {
+    padding-top: 135px;
+
     &-header {
       @extend .header__h4;
       text-align: center;
