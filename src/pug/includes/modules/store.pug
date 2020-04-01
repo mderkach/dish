@@ -1,0 +1,26 @@
+section.store
+  .container
+    .row
+      include ./breadcrumbs
+      sidebar.store__menu-wrapper
+        .store__menu-head
+          img.store__menu-icon(src="../../../assets/img/icon-list.png", alt="")
+          span.store__menu-text Каталог товаров
+        .store__menu-category
+          span.store__menu-text По категориям
+        .store__menu-category-items
+          a.store__menu-category-link.is-active(href="#") Тарелки плоские
+          a.store__menu-category-link(href="#") Тарелки глубокие
+          a.store__menu-category-link(href="#") Блюда
+          a.store__menu-category-link(href="#") Кружки
+        .store__menu-category
+          span.store__menu-text По коллекциям
+        .store__menu-category-items
+          a.store__menu-category-link(href="#") Коллекция 1
+          a.store__menu-category-link(href="#") Коллекция 2
+          a.store__menu-category-link(href="#") Коллекция 3
+          a.store__menu-category-link(href="#") Коллекция 4
+
+      main.store__items-wrapper
+        h2.store__header.--afterline #{ header }
+        block content

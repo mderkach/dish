@@ -1,0 +1,43 @@
+.breadcrumbs {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    padding: 17px 0 21px;
+  }
+
+  &__breadcrumb {
+    position: relative;
+    display: block;
+    margin-right: 36px;
+    @extend .text__regular;
+    color: #043C53;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -21px;
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      background-image: url('../../../assets/img/svg/icon-arrow-right.svg');
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:nth-last-child(1) {
+      cursor: default;
+      pointer-events: none;
+      color: #48a490;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

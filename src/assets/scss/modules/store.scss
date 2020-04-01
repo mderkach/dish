@@ -1,0 +1,114 @@
+.store {
+  border-top: 2px solid #0489a8;
+
+  &__header {
+    margin-bottom: 40px;
+    @extend .header__h4;
+    color: #0489a8;
+
+    &::after {
+      bottom: -20px;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  &__menu {
+    &-wrapper {
+      @include make-col-ready();
+      @include make-col(2);
+    }
+
+    &-head {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 18px 20px 20px;
+      background: #0489A8;
+      border-radius: 35px;
+      z-index: 10;
+    }
+
+    &-category {
+      position: relative;
+      top: -53px;
+      width: 100%;
+      margin-bottom: -53px;
+      padding: 70px 20px 20px;
+      background: #0F3B47;
+      border-radius: 25px;
+      z-index: 5;
+
+      &:nth-of-type(4) {
+        z-index: 3;
+      }
+
+      &-items {
+        position: relative;
+        top: -53px;
+        width: 100%;
+        margin-bottom: -53px;
+        padding: 70px 20px 20px;
+        background: linear-gradient(90deg, #F0FBFA -0.03%, #F2FBFC 99.96%);
+        border-radius: 25px;
+        z-index: 4;
+
+        &:nth-of-type(5) {
+          z-index: 2;
+        }
+
+      }
+
+      &-link {
+        display: block;
+        margin-bottom: 16px;
+        @extend .text__button;
+        color: #0B111D;
+
+        &.is-active {
+          color: #48a490;
+
+          &:hover {
+            cursor: default;
+            color: #48a490;
+            pointer-events: none;
+            text-decoration: none;
+          }
+        }
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &-head {
+      .store__menu-text {
+        color: #fff;
+      }
+    }
+
+    &-category {
+      .store__menu-text {
+        background: linear-gradient(90deg, #ACD8F5 -0.03%, #88D8CF 99.96%);
+        background-clip: text;
+        color: transparent;
+
+      }
+    }
+
+    &-text {
+      @extend .text__button;
+      color: #0B111D;
+    }
+  }
+
+  &__items {
+    &-wrapper {
+      @include make-col-ready();
+      @include make-col(10);
+    }
+  }
+}
