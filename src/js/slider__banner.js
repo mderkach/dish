@@ -5,6 +5,8 @@ let swiper = new Swiper(".slider__banner-container", {
   autoplay: {
     delay: 5000
   },
+  wrapperClass: "slider__banner-wrapper",
+  slideClass: "slider__banner-slide",
   pagination: {
     el: ".slider__banner-pagination",
     type: "bullets",

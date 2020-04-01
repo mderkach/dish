@@ -1,0 +1,11 @@
+extends ../layout/store
+
+block variables
+  - var title = 'dishware';
+  - var description = 'collection page';
+  - var pageClass = 'collection-page';
+  - var breadcrumbs = [{"link":"#", "label": "Главная"},{"link":"#", "label": "Каталог товаров"},{"link":"#", "label": "Набор посуды для ресторана «NoName»"}];
+  - var header = 'Набор посуды для ресторана «NoName»';
+
+block content
+  include ../includes/modules/collection
