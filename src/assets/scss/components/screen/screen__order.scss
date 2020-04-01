@@ -6,6 +6,17 @@
     padding: 146px 0 279px;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 68%);
 
+    &.--collection {
+      top: -14px;
+      background-color: #fafefe;
+      clip-path: polygon(0 0, 100% 13%, 100% 67%, 0 100%);
+      margin-bottom: -296px;
+
+      .screen__oder-waves {
+        height: 963px;
+      }
+    }
+
     &-waves {
       position: absolute;
       top: 0;
