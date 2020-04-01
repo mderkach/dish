@@ -1,0 +1,49 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 20px 21px 17px;
+  background: #043C53;
+  border-radius: 5px;
+
+  &-text {
+    margin-right: 10px;
+    margin-bottom: 0;
+    @extend .text__button;
+    color: #fff;
+    text-transform: unset;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-right: 28px;
+
+    .toolbar-text {
+      margin-right: 6px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 3px 0 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &.is-active {
+      svg {
+        path {
+          stroke: #84c5cd;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+}
