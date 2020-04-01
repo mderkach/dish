@@ -1,0 +1,17 @@
+- var i = 0;
+
+.card__catalogue-wrapper
+  while i < 12
+    .card__catalogue(data-index=i++)
+      .card__catalogue-header
+        img.card__catalogue-img(src="../../../../assets/img/plate.png", alt="")
+      .card__catalogue-body
+        p.card__catalogue-name Тарелка плоская 19 см
+        p.card__catalogue-text Арт. 80325660
+        p.card__catalogue-text Диаметр: 19 см
+        p.card__catalogue-text Бренд: Luminarc
+        p.card__catalogue-text Высота: 1,7 см
+        p.card__catalogue-text Материал: Стекло
+      .card__catalogue-footer
+        p.card__catalogue-price 129 р
+        button.card__catalogue-order(data-toggle="modal" data-target="#order") Оставить заявку
