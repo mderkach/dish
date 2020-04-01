@@ -1,0 +1,15 @@
+#order.modal.fade(tabindex='-1' role='dialog' aria-labelledby='orderLabel' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      form.modal-body.modal-form.is-active(action="#", method="post")
+        h2.modal-heading.--afterline Оставьте заявку
+        h4.screen__order-form-header Оставьте свои данные, наш менеджер перезвонит Вам в течение нескольких минут, для уточнения деталей
+        input.screen__order-form-input(type="text" placeholder="Ваше имя" name="name" required)
+        input.screen__order-form-input(type="text" placeholder="Ваш телефон" name="phone" required)
+        p.screen__order-form-agreement Нажимая на кнопку, Вы даете согласие на обработку Персональных данных
+        button.screen__order-form-submit(type='submit') Заказать посуду по индивидуальному дизайну
+      button.modal-close(type='button' data-dismiss='modal' aria-label='Close')
+        img(src="../../../assets/img/icon-close.png", alt="")
+      .modal-body.modal-success
+        h2.modal-heading СПАСИБО!
+        h2.modal-heading ВАША ЗАЯВКА ПРИНЯТА

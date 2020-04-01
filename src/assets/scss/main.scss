@@ -68,7 +68,8 @@ li {
   list-style-type: none;
 }
 
-input {
+input,
+button {
   &:focus {
     outline: none;
   }
@@ -111,3 +112,4 @@ input {
 @import "./modules/calculator";
 @import "./components/screen/screen__team";
 @import "./components/slider/slider__team";
+@import "./modules/modal";

@@ -2,6 +2,9 @@ import Swiper from "swiper";
 
 let swiper = new Swiper(".slider__banner-container", {
   loop: true,
+  autoplay: {
+    delay: 5000
+  },
   pagination: {
     el: ".slider__banner-pagination",
     type: "bullets",

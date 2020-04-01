@@ -10,7 +10,7 @@
     width: 100%;
     height: 961px;
     opacity: .35;
-    z-index: 0;
+    z-index: -1;
   }
 
   &__map {
@@ -19,7 +19,7 @@
     right: 0;
     width: 50%;
     height: 100%;
-    z-index: -2;
+    z-index: -10;
   }
 
   &__contacts {
@@ -28,6 +28,7 @@
     }
 
     &-header {
+      margin-bottom: 54px;
       @extend .header__h4;
       color: #0489a8;
 
