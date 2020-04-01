@@ -1,7 +1,9 @@
 footer.footer
+  img.footer__waves(src="../../../assets/img/waves/waves__footer.png", alt="")
+  .footer__map#map
   .container
     .row
-      .col-6
+      .footer__contacts-wrapper
         h4.footer__contacts-header.--afterline Наши контакты
         .footer__contacts
           a.footer__contacts-tel(href="tel:88001231212")
@@ -26,3 +28,16 @@ footer.footer
             img(src="../../../assets/img/icon-clock.png", alt="")
             | Ждем вас с 9.00 до 21.00
           button.footer__button Оставить заявку
+block script
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+  script(type='text/javascript').
+    ymaps.ready(init);
+    function init(){
+      var myMap = new ymaps.Map("map", {
+      center: [55.74814356898691,37.540487999999975],
+      controls: [],
+      zoom: 17,
+      });
+
+      myMap.behaviors.disable('scrollZoom');
+    }

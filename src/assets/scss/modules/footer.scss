@@ -1,6 +1,31 @@
 .footer {
+  position: relative;
+  height: 961px;
+  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
+
+  &__waves {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 961px;
+    opacity: .35;
+    z-index: 0;
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -2;
+  }
+
   &__contacts {
-    margin-top: 46px;
+    &-wrapper {
+      margin-top: 354px;
+    }
 
     &-header {
       @extend .header__h4;
@@ -22,7 +47,7 @@
         cursor: pointer;
         color: #000;
         text-decoration: none;
-        text-shadow: 0 4px 25px #0489A8;
+        text-shadow: 0 4px 25px #0489a8;
       }
 
       img {
