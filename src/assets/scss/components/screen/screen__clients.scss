@@ -1,10 +1,11 @@
 .screen {
   &__clients {
     position: relative;
-    top: -80px;
-    margin-bottom: -80px;
+    top: -100px;
+    margin-bottom: -100px;
 
     &-header {
+      margin-bottom: 63px;
       @extend .header__h4;
       text-align: center;
       color: #0489a8;
