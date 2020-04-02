@@ -49,6 +49,13 @@ for (i = 0; i < x.length; i++) {
     this.classList.toggle("calculator__select-arrow-active");
     chevron.classList.toggle("--rotate");
   });
+  chevron.addEventListener("click", e => {
+    e.stopPropagation();
+    closeAllSelect(a);
+    a.nextSibling.classList.toggle("calculator__select-hide");
+    a.classList.toggle("calculator__select-arrow-active");
+    chevron.classList.toggle("--rotate");
+  });
 }
 
 function closeAllSelect(elmnt) {
