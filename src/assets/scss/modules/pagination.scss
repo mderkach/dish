@@ -1,0 +1,23 @@
+.pagination {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 450px;
+    margin: 70px auto 24px;
+    padding: 0 65px;
+  }
+
+  &__link {
+    @extend .text__regular;
+    color: #043C53;
+
+    &:hover,
+    &.is-active {
+      text-decoration: none;
+      color: #48a490;
+      stroke: #48a490;
+    }
+  }
+}

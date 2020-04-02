@@ -1,8 +1,9 @@
 .footer {
   position: relative;
   height: 961px;
+  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0 100%);
 
-  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0 100%) &__waves {
+  &__waves {
     position: absolute;
     top: 0;
     display: block;
