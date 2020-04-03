@@ -9,5 +9,16 @@ let swiper = new Swiper(".slider__team", {
     nextEl: ".slider__team-next",
     prevEl: ".slider__team-prev",
     disabledClass: "slider__team-disabled"
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
   }
 });

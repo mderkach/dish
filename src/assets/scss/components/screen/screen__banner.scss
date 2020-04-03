@@ -21,6 +21,12 @@
         height: 120%;
         object-fit: fill;
       }
+
+      @include media-breakpoint-down('lg') {
+        top: -250px;
+        height: 141%;
+        object-fit: cover;
+      }
     }
   }
 }

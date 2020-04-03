@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
     z-index: 50;
+
+    @include media-breakpoint-down('lg') {
+      flex-direction: column;
+      padding: 20px 0;
+    }
   }
 
   &__logo {
@@ -46,6 +51,10 @@
 
     &:hover {
       cursor: default;
+    }
+
+    @include media-breakpoint-down('lg') {
+      margin: 16px 0;
     }
   }
 

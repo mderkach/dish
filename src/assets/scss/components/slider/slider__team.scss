@@ -43,6 +43,11 @@
       @include media-breakpoint-down('xl') {
         margin-bottom: 15px;
       }
+
+      @include media-breakpoint-down('lg') {
+        max-width: unset;
+        max-height: unset;
+      }
     }
 
     &-name {
@@ -70,6 +75,11 @@
       align-items: center;
       width: 100%;
       height: 100%;
+
+      @include media-breakpoint-down('lg') {
+        position: relative;
+        margin: 16px 0;
+      }
     }
 
     &-prev,
@@ -85,6 +95,19 @@
           width: 100%;
           height: 100%;
         }
+      }
+
+      @include media-breakpoint-down('lg') {
+        position: relative;
+        top: unset;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
 

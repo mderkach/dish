@@ -13,6 +13,11 @@
       clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 83%);
     }
 
+    @include media-breakpoint-down('lg') {
+      padding-bottom: 120px;
+      margin-bottom: -35px;
+    }
+
     &-header {
       @extend .header__h4;
       text-align: center;

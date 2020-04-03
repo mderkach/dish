@@ -5,9 +5,18 @@
     @include make-col(6);
     margin-top: 35px;
 
+    @include media-breakpoint-down('lg') {
+      @include make-col(8);
+    }
+
     &__wrapper {
       @include make-row();
       justify-content: center;
+
+      @include media-breakpoint-down('lg') {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &-img {

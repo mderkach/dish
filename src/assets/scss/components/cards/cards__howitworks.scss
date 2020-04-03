@@ -5,6 +5,14 @@
     &:nth-child(1),
     &:nth-last-child(1) {
       flex-direction: column-reverse;
+
+      @include media-breakpoint-down('lg') {
+        flex-direction: column;
+
+        img {
+          margin-bottom: 23px;
+        }
+      }
     }
 
     &:nth-child(1) {
@@ -44,6 +52,10 @@
       display: block;
       width: 100%;
       z-index: 0;
+
+      @include media-breakpoint-down('lg') {
+        transform: rotate(90deg) translate(38%, 0);
+      }
     }
 
     &-wrapper {
@@ -51,6 +63,10 @@
       @include make-col(12);
       @include make-col-offset(0);
       align-items: center;
+
+      @include media-breakpoint-down('lg') {
+        flex-direction: column;
+      }
     }
 
     &-descr {

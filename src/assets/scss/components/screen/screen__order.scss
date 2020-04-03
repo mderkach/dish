@@ -37,6 +37,11 @@
       @include make-col(6);
       @include make-col-offset(3);
 
+      @include media-breakpoint-down('lg') {
+        @include make-col(10);
+        @include make-col-offset(1);
+      }
+
       &-header {
         margin-bottom: 40px;
         @extend .text__big;
