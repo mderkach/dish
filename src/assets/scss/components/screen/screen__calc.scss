@@ -18,6 +18,10 @@
       margin-bottom: -35px;
     }
 
+    @include media-breakpoint-down('md') {
+      clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 92%);
+    }
+
     &-header {
       @extend .header__h4;
       text-align: center;

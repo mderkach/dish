@@ -7,6 +7,11 @@
     height: 100%;
   }
 
+  @include media-breakpoint-down('md') {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__waves {
     position: absolute;
     top: 0;
@@ -20,6 +25,10 @@
       height: 100%;
       object-fit: fill;
     }
+
+    @include media-breakpoint-down('xl') {
+      object-fit: cover;
+    }
   }
 
   &__map {
@@ -29,6 +38,13 @@
     width: 50%;
     height: 100%;
     z-index: -10;
+
+    @include media-breakpoint-down('md') {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      order: 2;
+    }
   }
 
   &__contacts {
@@ -46,6 +62,12 @@
       @include media-breakpoint-down('lg') {
         margin-top: 150px;
         margin-bottom: 150px;
+      }
+
+      @include media-breakpoint-down('md') {
+        width: 100%;
+        margin-top: 210px;
+        margin-bottom: 90px;
       }
     }
 

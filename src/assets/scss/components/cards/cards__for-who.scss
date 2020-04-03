@@ -9,6 +9,10 @@
       @include make-col(8);
     }
 
+    @include media-breakpoint-down('md') {
+      @include make-col(12);
+    }
+
     &__wrapper {
       @include make-row();
       justify-content: center;
