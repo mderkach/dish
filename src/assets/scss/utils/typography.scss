@@ -29,6 +29,10 @@
     @include media-breakpoint-down('xl') {
       font-size: 30px;
     }
+
+    @include media-breakpoint-down('sm') {
+      font-size: 26px;
+    }
   }
 
   &__h5 {

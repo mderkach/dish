@@ -56,6 +56,10 @@
     @include media-breakpoint-down('lg') {
       margin: 16px 0;
     }
+
+    @include media-breakpoint-down('sm') {
+      text-align: center;
+    }
   }
 
   &__contacts {
@@ -86,6 +90,11 @@
       &:hover {
         cursor: pointer;
         box-shadow: 0 4px 25px #0489A8;
+      }
+
+      @include media-breakpoint-down('sm') {
+        margin-left: 16px;
+        padding: 17px 24px 18px;
       }
     }
   }

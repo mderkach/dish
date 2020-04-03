@@ -16,10 +16,24 @@
   &__menu {
     max-width: 210px;
 
+    @include media-breakpoint-down('xl') {
+      max-width: unset;
+    }
+
     &-wrapper {
       @include make-col-ready();
       @include make-col(2);
       padding: 0;
+
+      @include media-breakpoint-down('xl') {
+        @include make-col-ready();
+        @include make-col(3);
+      }
+
+      @include media-breakpoint-down('md') {
+        @include make-col(12);
+        margin-bottom: 20px;
+      }
     }
 
     &-head {
@@ -32,6 +46,14 @@
       background: #0489A8;
       border-radius: 35px;
       z-index: 10;
+
+      @include media-breakpoint-down('md') {
+        justify-content: center;
+
+        img {
+          margin-right: 16px;
+        }
+      }
     }
 
     &-category {
@@ -113,6 +135,19 @@
       @include make-col-ready();
       @include make-col(10);
       padding: 0;
+
+      @include media-breakpoint-down('xl') {
+        @include make-col(8);
+      }
+
+      @include media-breakpoint-down('lg') {
+        @include make-col-ready();
+        @include make-col(9);
+      }
+
+      @include media-breakpoint-down('md') {
+        @include make-col(12);
+      }
     }
   }
 }

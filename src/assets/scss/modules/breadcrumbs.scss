@@ -3,6 +3,10 @@
     display: flex;
     width: 100%;
     padding: 17px 0 21px;
+
+    @include media-breakpoint-down('xl') {
+      @include make-col-ready();
+    }
   }
 
   &__breadcrumb {
