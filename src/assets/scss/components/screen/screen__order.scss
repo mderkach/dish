@@ -19,8 +19,16 @@
       clip-path: polygon(0% 0%, 100% 13%, 100% 70%, 0% 92%);
       margin-bottom: -270px;
 
-      .screen__oder-waves {
-        height: 963px;
+      @include media-breakpoint-down('sm') {
+        height: 100%;
+        padding-bottom: 205px;
+      }
+
+      >.screen__oder-waves {
+        @include media-breakpoint-down('lg') {
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
 

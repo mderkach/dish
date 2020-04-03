@@ -6,6 +6,7 @@
 
     @include media-breakpoint-down('xl') {
       @include make-col-ready();
+      flex-wrap: wrap;
     }
   }
 
