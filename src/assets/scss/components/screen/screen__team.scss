@@ -3,6 +3,7 @@
     position: relative;
 
     &-header {
+      margin-bottom: 63px;
       @extend .header__h4;
       text-align: center;
       color: #0489a8;

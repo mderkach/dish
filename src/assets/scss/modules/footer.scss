@@ -3,6 +3,10 @@
   height: 961px;
   clip-path: polygon(0 19%, 100% 0, 100% 100%, 0 100%);
 
+  @include media-breakpoint-down('xl') {
+    height: 100%;
+  }
+
   &__waves {
     position: absolute;
     top: 0;
@@ -11,6 +15,11 @@
     height: 961px;
     opacity: .35;
     z-index: -1;
+
+    @include media-breakpoint-down('xl') {
+      height: 100%;
+      object-fit: fill;
+    }
   }
 
   &__map {
@@ -28,6 +37,11 @@
     &-wrapper {
       width: calc(50% - 25px);
       margin-top: 354px;
+
+      @include media-breakpoint-down('xl') {
+        margin-top: 200px;
+        margin-bottom: 200px;
+      }
     }
 
     &-header {

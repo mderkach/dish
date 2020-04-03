@@ -4,6 +4,10 @@
     height: 850px;
     z-index: 0;
 
+    @include media-breakpoint-down('xl') {
+      height: 100%;
+    }
+
     &-waves {
       position: absolute;
       top: -120px;
@@ -12,6 +16,11 @@
       height: 960px;
       opacity: .35;
       z-index: 2;
+
+      @include media-breakpoint-down('xl') {
+        height: 120%;
+        object-fit: fill;
+      }
     }
   }
 }
