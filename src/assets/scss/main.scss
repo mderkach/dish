@@ -91,6 +91,16 @@ button {
     background-color: #48a490;
     transform: translate(-50%);
   }
+
+  @include media-breakpoint-down('sm') {
+    text-align: center;
+
+    &::after {
+      width: 100%;
+      left: 0;
+      transform: translate(0);
+    }
+  }
 }
 
 // Modules:

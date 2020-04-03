@@ -20,6 +20,10 @@
         @include make-col(12);
         @include make-col-offset(0);
       }
+
+      @include media-breakpoint-down('sm') {
+        flex-direction: column;
+      }
     }
 
     &-descr {

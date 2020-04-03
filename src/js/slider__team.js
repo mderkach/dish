@@ -13,6 +13,9 @@ let swiper = new Swiper(".slider__team", {
   breakpoints: {
     // when window width is >= 320px
     320: {
+      slidesPerView: 1
+    },
+    575: {
       slidesPerView: 2,
       spaceBetween: 40
     },

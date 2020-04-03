@@ -56,6 +56,11 @@
       @include media-breakpoint-down('lg') {
         transform: rotate(90deg) translate(38%, 0);
       }
+
+      @include media-breakpoint-down('md') {
+        width: 300%;
+        transform: rotate(90deg) translate(36%, 230%);
+      }
     }
 
     &-wrapper {

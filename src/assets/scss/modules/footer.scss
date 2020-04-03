@@ -50,6 +50,10 @@
   &__contacts {
     padding-left: 38px;
 
+    @include media-breakpoint-down('md') {
+      padding-left: 10px;
+    }
+
     &-wrapper {
       width: calc(50% - 25px);
       margin-top: 354px;
@@ -152,5 +156,10 @@
     @extend .text__button;
     color: #ffffff;
     text-transform: uppercase;
+
+    @include media-breakpoint-down('sm') {
+      max-width: 195px;
+      padding: 19px 40px 16px;
+    }
   }
 }

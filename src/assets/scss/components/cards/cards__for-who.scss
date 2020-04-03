@@ -13,6 +13,10 @@
       @include make-col(12);
     }
 
+    @include media-breakpoint-down('sm') {
+      flex-direction: column;
+    }
+
     &__wrapper {
       @include make-row();
       justify-content: center;
@@ -29,6 +33,11 @@
       height: 250px;
       margin-right: 25px;
       border-radius: 5px;
+
+      @include media-breakpoint-down('sm') {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &-body {

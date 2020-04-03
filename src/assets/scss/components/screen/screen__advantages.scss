@@ -17,6 +17,10 @@
         @include make-col(8);
       }
 
+      @include media-breakpoint-down('sm') {
+        @include make-col(11);
+      }
+
       &:hover {
         cursor: pointer;
         box-shadow: 0 4px 25px #88d8cf;
