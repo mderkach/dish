@@ -103,6 +103,15 @@ button {
   }
 }
 
+.no-scroll {
+  padding-right: 16px;
+  overflow-y: hidden;
+
+  @include media-breakpoint-down('md') {
+    padding-right: unset;
+  }
+}
+
 // Modules:
 // example: @import "modules/my-module.scss";
 @import "./modules/header";

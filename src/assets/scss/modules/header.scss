@@ -22,6 +22,10 @@
     text-transform: uppercase;
     color: #0489a8;
 
+    @include media-breakpoint-down('xs') {
+      font-size: 22px;
+    }
+
     &:hover {
       text-decoration: none;
       text-shadow: 0 4px 25px #88d8cf;
@@ -117,6 +121,19 @@
     box-shadow: 36px 12px 15px -4px rgba(15, 59, 71, 0.1);
     transition: all 0.5s ease;
 
+    @include media-breakpoint-down('lg') {
+      position: fixed;
+      top: 256px;
+      width: 100vw;
+      max-width: unset;
+      height: calc(100vh - 256px);
+      overflow-y: auto;
+    }
+
+    @include media-breakpoint-down('md') {
+      padding: 0px 10px 30px;
+    }
+
     &.is-active {
       left: 0;
     }
@@ -125,6 +142,10 @@
     &-bottom {
       display: flex;
       justify-content: space-between;
+
+      @include media-breakpoint-down('lg') {
+        flex-direction: column;
+      }
     }
 
     &-top {
@@ -138,6 +159,14 @@
 
     &-block {
       flex: 1 0 25%;
+
+      @include media-breakpoint-down('lg') {
+        margin-bottom: 16px;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
     }
 
     &-header {

@@ -4,6 +4,7 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
+const browserSyncPlugin = require("browser-sync-webpack-plugin");
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
@@ -13,14 +14,25 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     port: 8081,
     overlay: {
       warnings: true,
-      errors: true
-    }
+      errors: true,
+    },
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
-      filename: "[file].map"
-    })
-  ]
+      filename: "[file].map",
+    }),
+    new browserSyncPlugin(
+      {
+        host: "localhost",
+        port: 3000,
+        proxy: "http://localhost:8081/",
+        notify: false,
+      },
+      {
+        reload: false,
+      }
+    ),
+  ],
 });
 
 module.exports = new Promise((resolve, reject) => {
