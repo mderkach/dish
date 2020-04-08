@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const PATHS = {
   src: path.join(__dirname, "../src"),
   dist: path.join(__dirname, "../dist"),
-  assets: "assets/"
+  assets: "assets/",
 };
 
 // Pages const for HtmlWebpackPlugin
@@ -19,20 +19,20 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
-  .filter(fileName => fileName.endsWith(".pug"));
+  .filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
   externals: {
-    paths: PATHS
+    paths: PATHS,
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
-    publicPath: ""
+    publicPath: "",
   },
   optimization: {
     splitChunks: {
@@ -41,22 +41,25 @@ module.exports = {
           name: "vendors",
           test: /node_modules/,
           chunks: "all",
-          enforce: true
-        }
-      }
-    }
+          enforce: true,
+        },
+      },
+    },
   },
   module: {
     rules: [
       {
         test: /\.pug$/,
-        loader: "pug-loader"
+        loader: "pug-loader",
+        query: {
+          pretty: true,
+        },
       },
       {
         // JavaScript
         test: /\.js$/,
         loader: "babel-loader",
-        exclude: "/node_modules/"
+        exclude: "/node_modules/",
       },
       {
         // Fonts
@@ -65,16 +68,16 @@ module.exports = {
         options: {
           name: "fonts/[name]/[name].[ext]",
           outputPath: `${PATHS.assets}`,
-          publicPath: "../"
-        }
+          publicPath: "../",
+        },
       },
       {
         // images / icons
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]"
-        }
+          name: "[name].[ext]",
+        },
       },
       {
         // scss
@@ -84,20 +87,20 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true, url: false }
+            options: { sourceMap: true, url: false },
           },
           {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
-              config: { path: `./postcss.config.js` }
-            }
+              config: { path: `./postcss.config.js` },
+            },
           },
           {
             loader: "sass-loader",
-            options: { sourceMap: true }
-          }
-        ]
+            options: { sourceMap: true },
+          },
+        ],
       },
       {
         // css
@@ -107,41 +110,41 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true }
+            options: { sourceMap: true },
           },
           {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
-              config: { path: `./postcss.config.js` }
-            }
-          }
-        ]
+              config: { path: `./postcss.config.js` },
+            },
+          },
+        ],
       },
       {
         test: /bootstrap\.native/,
         use: {
           loader: "bootstrap.native-loader",
           options: {
-            only: ["modal"]
-          }
-        }
-      }
-    ]
+            only: ["modal"],
+          },
+        },
+      },
+    ],
   },
   resolve: {
     alias: {
-      "~": PATHS.src
-    }
+      "~": PATHS.src,
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename: `${PATHS.assets}css/[name].[contenthash].css`,
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/static`, to: "" }
+      { from: `${PATHS.src}/static`, to: "" },
     ]),
 
     /*
@@ -152,11 +155,11 @@ module.exports = {
       https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
     */
     ...PAGES.map(
-      page =>
+      (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, ".html")}`
+          filename: `./${page.replace(/\.pug/, ".html")}`,
         })
-    )
-  ]
+    ),
+  ],
 };

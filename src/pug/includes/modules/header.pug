@@ -2,12 +2,77 @@ header.header
   .container
     .row
       .header__wrapper
-        a(href='#').header__logo
-          span YOUR-
-          span OWN-
-          span DISHWARE
-          span .ru
+        .header__logo-wrapper
+          .header__catalogue-button
+            svg(width='44' height='44' viewbox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path.to-fill(fill-rule='evenodd' clip-rule='evenodd' d='M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z' fill='#0489A8')
+              path(d='M18 16H31' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M18 22H31' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M18 28H31' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M13 16H13.01' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M13 22H13.01' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M13 28H13.01' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          a(href='#').header__logo
+            span YOUR-
+            span OWN-
+            span DISHWARE
+            span .ru
         p.header__text Посуда любой формы с уникальным дизайном
         .header__contacts
           a(href='tel:88001231212').header__contacts-tel 8 800 123 12 12
           button.header__contacts-callback(data-toggle="modal" data-target="#order") Оставить заявку
+        .header__catalogue
+          .header__catalogue-top
+            each block in [0,1,2,3]
+              .header__catalogue-block
+                h5.header__catalogue-header Тарелки плоские
+                ul.header__catalogue-list
+                  li.header__catalogue-item
+                    a(href="#") Тарелки плоские ⌀20 см
+                  li.header__catalogue-item
+                    a(href="#") Тарелки плоские ⌀20 см
+                  li.header__catalogue-item
+                    a(href="#") Тарелки плоские ⌀20 см
+                  li.header__catalogue-item
+                    a(href="#") Тарелки плоские ⌀20 см
+          .header__catalogue-bottom
+            .header__catalogue-block
+              h5.header__catalogue-header Коллекции
+              ul.header__catalogue-list
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+                li.header__catalogue-item
+                  a(href="#") Коллекция 1
+            each block in [0,1]
+              .header__catalogue-block
+                h5.header__catalogue-header
+                ul.header__catalogue-list
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+                  li.header__catalogue-item
+                    a(href="#") Коллекция 1
+            .header__catalogue-block
+              h5.header__catalogue-header Акции
+              ul.header__catalogue-list
+                li.header__catalogue-item
+                  a(href="#") РАСПРОДАЖА
